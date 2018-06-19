@@ -1,25 +1,20 @@
-import * as React from 'react';
+import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import 'isomorphic-fetch';
 
-interface FetchDataExampleState {
-    forecasts: WeatherForecast[];
-    loading: boolean;
-}
 
-export class FetchData extends React.Component<RouteComponentProps<{}>, FetchDataExampleState> {
+export class FetchData extends React.Component {
     constructor() {
         super();
         this.state = { forecasts: [], loading: true };
 
         fetch('api/SampleData/WeatherForecasts')
-            .then(response => response.json() as Promise<WeatherForecast[]>)
+            .then(response => response.json())
             .then(data => {
                 this.setState({ forecasts: data, loading: false });
             });
     }
 
-    public render() {
+    render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
             : FetchData.renderForecastsTable(this.state.forecasts);
@@ -31,7 +26,7 @@ export class FetchData extends React.Component<RouteComponentProps<{}>, FetchDat
         </div>;
     }
 
-    private static renderForecastsTable(forecasts: WeatherForecast[]) {
+    static renderForecastsTable(forecasts) {
         return <table className='table'>
             <thead>
                 <tr>
@@ -53,11 +48,4 @@ export class FetchData extends React.Component<RouteComponentProps<{}>, FetchDat
             </tbody>
         </table>;
     }
-}
-
-interface WeatherForecast {
-    dateFormatted: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
 }
