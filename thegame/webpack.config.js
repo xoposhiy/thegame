@@ -16,8 +16,11 @@ module.exports = (env) => {
         },
         module: {
             rules: [
-                { test: /\.js$/, include: /ClientApp/, use: 'babel-loader' },
-                {
+                { 
+                    test: /\.js$/, 
+                    include: /ClientApp/, 
+                    use: 'babel-loader' 
+                }, {
                     test: /\.css$/,
                     loader: 'style-loader'
                 }, {
@@ -28,8 +31,10 @@ module.exports = (env) => {
                         localIdentName: isDevBuild ? '[name]_[local]' : '[hash:base64:5] ',
                         minimize: true
                     }
-                },
-                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
+                }, { 
+                    test: /\.(png|jpg|jpeg|gif|svg)$/, 
+                    use: 'url-loader?limit=25000' 
+                }
             ]
         },
         plugins: [
