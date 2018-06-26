@@ -1,3 +1,25 @@
 :local .root {
     display: flex;
 }
+
+:local .link {
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+}
+
+:local .link:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+:local .active .link {
+    color: #aaa;
+    cursor: default;
+}
+
+:local .active .link:hover {
+    cursor: default;
+    color: #aaa;
+    text-decoration: none;
+}

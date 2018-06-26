@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'whatwg-fetch';
+import './base.css'
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 import * as RoutesModule from './routes';
@@ -23,7 +24,7 @@ renderApp();
 // Allow Hot Module Replacement
 if (module.hot) {
     module.hot.accept('./routes', () => {
-        routes = require<typeof RoutesModule>('./routes').routes;
+        routes = require('./routes').routes;
         renderApp();
     });
 }

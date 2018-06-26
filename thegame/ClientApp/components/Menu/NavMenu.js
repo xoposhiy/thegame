@@ -1,19 +1,22 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './menu.css';
 
 export default class NavMenu extends React.Component {
     render () {
         return (
             <div className={styles.root}>
-                <NavLink to={'/'} exact activeClassName='active'>
-                    <span className='glyphicon glyphicon-home'></span> Home
+                <NavLink to={'/'} exact activeClassName={styles.active}>
+                    <span className={styles.link}>Home</span>
                 </NavLink>
-                <NavLink to={'/counter'} activeClassName='active'>
-                    <span className='glyphicon glyphicon-education'></span> Counter
+                <NavLink to={'/counter'} activeClassName={styles.active}>
+                    <span className={styles.link}>Counter</span>
                 </NavLink>
-                <NavLink to={'/fetchdata'} activeClassName='active'>
-                    <span className='glyphicon glyphicon-th-list'></span> Fetch data
+                <NavLink to={'/fetchdata'} activeClassName={styles.active}>
+                    <span className={styles.link}>Fetch data</span>
+                </NavLink>
+                <NavLink to={'/slides'} activeClassName={styles.active}>
+                    <span className={styles.link}>Slides</span>
                 </NavLink>
             </div>
         );
