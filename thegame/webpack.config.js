@@ -7,8 +7,8 @@ module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
     return [{
         stats: { modules: false },
-        entry: { 'main': './ClientApp/boot.js' },
-        resolve: { extensions: ['.js'] },
+        entry: { 'main': './ClientApp/boot.jsx' },
+        resolve: { extensions: ['.js', '.jsx'] },
         output: {
             path: path.join(__dirname, bundleOutputDir),
             filename: '[name].js',
@@ -17,7 +17,7 @@ module.exports = (env) => {
         module: {
             rules: [
                 { 
-                    test: /\.js$/, 
+                    test: /\.jsx?$/, 
                     include: /ClientApp/, 
                     use: 'babel-loader' 
                 }, {
