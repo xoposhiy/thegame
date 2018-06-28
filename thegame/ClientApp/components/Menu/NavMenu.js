@@ -15,9 +15,9 @@ export default class NavMenu extends React.Component {
                 <NavLink to={'/fetchdata'} activeClassName={styles.active}>
                     <span className={styles.link}>Fetch data</span>
                 </NavLink>
-                <NavLink to={'/slides'} activeClassName={styles.active}>
+                <a href='slides/index.html'>
                     <span className={styles.link}>Slides</span>
-                </NavLink>
+                </a>
             </div>
         );
     }
