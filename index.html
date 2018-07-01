@@ -1,0 +1,220 @@
+<html>
+<head>
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/kontur-light.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal/css/highlight/idea-for-light.css">
+    <link rel="stylesheet" href="reveal/css/highlight/darkula-for-dark.css">
+
+    <style>
+        .fragment-container {
+            position: relative;
+        }
+
+            .fragment-container .fragment {
+                position: absolute;
+                top: 0px;
+                width: 100%;
+            }
+    </style>
+
+</head>
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+           
+           <section data-markdown>
+                <script type="text/template">
+                    ## Это хакатон!
+                    
+                    Свои команды вы узнали вчера.
+
+                    Свои задачи вы уже получили перед завтраком.
+
+                    Если вы всё пропустили или забыли,  
+                    то вся информация собана [в табличке](https://docs.google.com/spreadsheets/d/1gDc72WdwfFfVtjHLguDY6IyisiTV163bjzl2MngF7X0/edit#gid=1682586154).
+                    
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Расписание
+                    
+                    `09:30 – 16:00` — работа в командах
+                    
+                    `13:00 – 13:30` — обед
+                    
+                    `16:00 – 17:00` — финальные презентации
+                    
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Лидерборд
+                    
+                    У нас будет живой [лидерборд](https://docs.google.com/spreadsheets/d/1iD0ToS7nuSAvmuDw_46Yqit3fzPJVX9esV1mP_4QDuA/edit#gid=0) с цифрами и графиками!
+                    
+                    1. Каждый час жюри оценивает каждый из 8 проектов.
+                    2. Каждые несколько минут, результат последней оценки прибавляется к очкам.
+                    3. Выигрывает тот, кто у кого больше очков после окончания презентаций.
+                    
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ## Лидерборд
+                    
+                    <center>
+                    ![Leaderboard](leaderboard.png)                    
+                    </center>
+                    
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Очки, оценки, график, зачем так сложно?!
+                    
+                    Выгодно релизить хоть что-то но пораньше.
+                    Фичи после релиза начинают «зарабатывать» очки.
+                    
+                    Ломать — не выгодно.
+                    Сломанные фичи перестают «зарабатывать»
+                    
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## А как релизить то?
+
+                    У нас _сontinuous deploy_. 
+                    Каждый коммит в master автоматически разворачивается на Azure.
+                    Правда это может занимать 5-10 минут.                    
+                    
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Критерии оценки
+                    
+                    Сначала будем оценивать только соответствие выданной спецификации игры.
+                    Как только вы справились с этим, начинём оценивать по дополнительным критериям.
+                    Например, анимация, наличие лидерборда, аккуратность UI и т.п.
+                    
+                    О скрытых критериях будем постепенно рассказывать в чатике. Следите за ним!
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Аудит качества кода
+                    
+                    Дважды жюри оценит качество кода проектов.
+                    Первый раз — тогда, когда вы попросите.
+                    Второй — перед самым окончанием.
+                    
+                    Качественный код даст дополнительные баллы.
+                    Некачественный — не даст.
+                </script>
+            </section>
+            
+            <section data-markdown>
+                <script type="text/template">
+                    ## Кураторы
+                    
+                    У каждой команды есть два куратора: по фронтенду и по бэкенду.
+                    
+                    У каждого куратора — по две команды.
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Кураторы
+                    
+                    Кураторы не могут писать код, но могут помогать команде любым другим образом:
+                    
+                    советовать, организовывать работу, проводить летучки, тестировать, делать код-ревью, работать напарником в паре.
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Финальная презентация
+                    
+                    За час до конца, мы предложим всем командам выделить одного или несколько человек на подготовку презентации.
+                </script>
+            </section>
+            
+            <section data-markdown>
+                <script type="text/template">
+                    ## Что включить в презентацию?
+
+                    За первую минуту покажите финальное состояние своей игры.
+
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Самый большой WIN или FAIL
+
+                    Затем расскажите всем
+
+                    * О самой полезной находке, в коде, в идее или в организации работы.
+
+                    _или_
+
+                    * О самой большой ошибке, в коде или в организации работы, которую нужно научиться не совершать больше.
+
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Проиллюстрируйте свои слова на слайдах
+
+                    Например, кусочками кода:
+                    ```(csharp)
+                    Console.WriteLine("OUR BIG WIN!");
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ## или фотками
+
+                    <center>
+                        _Многозадачность — наше всё!_
+                        ![](multitasking.jpg)
+                    </center>
+                </script>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Сделайте так, чтобы другим было интересно
+
+                    Выбирая, что включить в презентацию, старайтесь сделать её интересной в первую очередь.
+                    Потестируйте ей на ваших сокомандниках.
+                </script>
+            </section>
+
+
+            </div>
+
+    </div>
+
+    <script src="reveal/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+    <script src="reveal/initialize.js"></script>
+    <script src="reveal/js/d3.min.js"></script>
+</body>
+</html>
